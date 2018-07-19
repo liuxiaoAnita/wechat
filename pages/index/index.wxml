@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <button bindtap='passwordInput'>支付</button>
+   <passwordInput 
+      wx:if="{{showPassword}}"
+      bindhidePassBord="hidePassBord"
+      bindvalueSix="valueSix" 
+      input_value="{{inputData.input_value}}" 
+      value_length="{{inputData.value_length}}" 
+      isNext="{{inputData.isNext}}" 
+      get_focus="{{inputData.get_focus}}" 
+      focus_class="{{inputData.focus_class}}" 
+      value_num="{{inputData.value_num}}"
+      height="{{inputData.height}}" 
+      width="{{inputData.width}}" 
+      see="{{inputData.see}}" 
+      interval="{{inputData.interval}}">
+    </passwordInput> 
+</view>

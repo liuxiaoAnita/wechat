@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#427AEB",
+    "navigationBarTitleText": "交易密码6位提交",
+    "navigationBarTextStyle": "white"
+  }
+}

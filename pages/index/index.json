@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "passwordInput": "/component/passwordInput/passwordInput"
+  }
+}

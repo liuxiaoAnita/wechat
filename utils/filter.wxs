@@ -1,0 +1,54 @@
+var fliterFun = {
+  filterMoney: function (money) {
+    if (!money) {
+      return '0.00'
+    }
+    var key = parseFloat(money).toLocaleString().split('.');
+    if (key[1]) {
+      if (key[1].length == 1) {
+        return key[0] + '.' + key[1] + '0'
+      } else {
+        return key[0] + '.' + key[1].slice(0, 2)
+      }
+    } else {
+      return key + '.00'
+    }
+  },
+  strBillCode: function (data) {
+    if (data) {
+      return data.toString().slice(-4)
+    } else {
+      return ''
+    }
+  },
+  billCodeBefore: function (data) {
+    if (data) {
+      return data.substring(0, data.length / 2);
+    } else {
+      return ''
+    }
+  },
+  billCodeAfter: function (data) {
+    if (data) {
+      return data.slice(-(data.length / 2))
+    } else {
+      return ''
+    }
+  },
+  daysColor: function (days) {
+    if (0 <= days && days <= 15) {
+      return 'red'
+    } else if (15 < days && days <= 90) {
+      return 'yellow'
+    } else {
+      return 'green'
+    }
+  }
+}
+module.exports = {
+  filterMoney: fliterFun.filterMoney,
+  strBillCode: fliterFun.strBillCode,
+  billCodeBefore: fliterFun.billCodeBefore,
+  billCodeAfter: fliterFun.billCodeAfter,
+  daysColor: fliterFun.daysColor
+}
